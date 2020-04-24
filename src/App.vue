@@ -11,8 +11,8 @@
       </v-app-bar>
 
       <!-- Nav Drawer -->
-      <v-navigation-drawer app>
-        <v-btn>button</v-btn>
+      <v-navigation-drawer app temporary>
+        <v-btn>button</v-btn>        
       </v-navigation-drawer>
 
       <!-- Content -->

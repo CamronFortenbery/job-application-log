@@ -11,8 +11,8 @@
       </v-app-bar>
 
       <!-- Nav Drawer -->
-      <v-navigation-drawer app>
-
+      <v-navigation-drawer app temporary>
+        
       </v-navigation-drawer>
 
       <!-- Content -->

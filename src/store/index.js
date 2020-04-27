@@ -40,12 +40,22 @@ export default new Vuex.Store({
         status: "Rejected",
         color: "red"
       }
-    ]
+    ],
+    user: {
+        username: "",
+        password: "",
+    },
   },
   mutations: {
     changeLoggedIn(state, val) {
       state.loggedIn = val;
-    }
+    },
+    changeUsername(state, val) {
+      state.user.username = val;
+    },
+    changePassword(state, val) {
+      state.user.password = val;
+    },
   },
   actions: {
   },

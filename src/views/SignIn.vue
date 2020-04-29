@@ -2,7 +2,8 @@
     <v-container fluid class="pa-0">
         <v-row>
             <v-col class="pa-0">
-                <v-img :src="require('../assets/img/login.jpg')" max-height="590px">  
+                <div height=100%>
+                    <v-img :src="require('../assets/img/login.jpg')">  
                     <v-row justify="end" class="pr-12 pt-12">
                         <v-col cols=5>
                             <v-card elevation=8>
@@ -34,7 +35,7 @@
                                 </v-form>                              
                                     <v-row justify="end">
                                         <v-col cols=5>
-                                            <v-btn v-if="username != '' && password != ''" rounded color="success" class="white--text">
+                                            <v-btn v-if="username != '' && password != ''" rounded color="success" class="white--text" @click="adminCheck">
                                                 Continue
                                             </v-btn>
                                             <v-btn v-else rounded disabled>
@@ -46,9 +47,10 @@
                         </v-col>
                     </v-row>
                 </v-img>            
+                </div>
+                
             </v-col>
-        </v-row>
-        
+        </v-row>        
     </v-container>
 </template>
 
@@ -77,7 +79,15 @@ export default {
         return {
             msg: "This is the SignIn page"
         }
+    },
+    methods: {
+        adminCheck() {
+            if (this.$store.state.user.username == this.$store.state.admin.username && this.$store.state.user.password == this.$store.state.admin.password) {
+                this.$store.commit("changeLoggedIn");
+            }
+        },
     }
+
 }
 </script>
 

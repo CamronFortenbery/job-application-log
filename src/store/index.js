@@ -45,10 +45,21 @@ export default new Vuex.Store({
         username: "",
         password: "",
     },
+    admin: {
+        username: "admin",
+        password: "password",
+    }
   },
   mutations: {
-    changeLoggedIn(state, val) {
-      state.loggedIn = val;
+    changeLoggedIn(state) {
+      if (state.loggedIn == false){
+        state.loggedIn = true;
+      }
+      else {
+        state.loggedIn = false;
+        state.user.username = "";
+        state.user.password = "";
+      }     
     },
     changeUsername(state, val) {
       state.user.username = val;

@@ -3,7 +3,7 @@
         <v-row>
             <v-col class="pa-0">
                 <div height=100%>
-                    <v-img :src="require('../assets/img/login.jpg')">  
+                    <v-img :src="require('@/assets/img/login.jpg')" >  
                     <v-row justify="end" class="pr-12 pt-12">
                         <v-col cols=5>
                             <v-card elevation=8>

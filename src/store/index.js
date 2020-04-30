@@ -19,7 +19,7 @@ export default new Vuex.Store({
       {
         company: "Apple",
         title: "Android Engineer",
-        dateApplied: "01/25/2020",
+        dateApplied: "01/25/2019",
         value: 33,
         status: "",
         color: "blue"

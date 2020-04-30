@@ -108,8 +108,8 @@
                                             <v-progress-linear :value="job.value" :color="job.color"></v-progress-linear>
                                         </v-col>
                                         <v-col cols=12 class="body-1 font-weight-bold text-center">
-                                            <span v-if="job.status == 'Rejected'" class="red--text">Rejected</span>
-                                            <span v-if="ghosted(job.dateApplied) && job.status != 'Rejected'" class="orange--text">Ghosted &#x1F47B;</span>
+                                            <span v-if="job.status == 'Rejected'" class="red--text">Rejected <span class="emoji-size">&#x1F62D;</span></span>
+                                            <span v-if="ghosted(job.dateApplied) && job.status != 'Rejected'" class="orange--text">Ghosted <span class="emoji-size">&#x1F47B;</span></span>
                                             <span v-if="!ghosted(job.dateApplied) && job.status != 'Rejected'" class="blue--text">Pending</span>
                                         </v-col>
                                     </v-row>
@@ -178,5 +178,8 @@ export default {
 </script>
 
 <style scoped>
+.emoji-size {
+    font-size: 3rem;
+}
 
 </style>
